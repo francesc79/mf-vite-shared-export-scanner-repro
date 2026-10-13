@@ -1,0 +1,12 @@
+Verified on Linux x64, Node.js v24.15.0, pnpm 11.1.1
+@module-federation/vite 1.23.5 and Vite 8.3.4 from public npm
+
+Command: pnpm repro
+Exit code: 0 (expected failures detected and controls passed)
+
+$ node scripts/repro.mjs
+baseline-template: build passed
+control: build passed
+template: reproduced MISSING_EXPORT for answer
+[MISSING_EXPORT] "answer" is not exported by "\0virtual:mf:__mfe_internal__reproApp__mf_owner__91940770143530__loadShare__shared_mf_2_demo_mf_1_template__loadShare__.js".
+Bug reproduced; the same source without MF and the MF control both passed.

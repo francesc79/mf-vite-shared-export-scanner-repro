@@ -1,0 +1,22 @@
+{
+  "name": "mf-vite-shared-export-scanner-repro",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.1.1",
+  "scripts": {
+    "build": "vite build --mode template",
+    "repro": "node scripts/repro.mjs",
+    "build:template": "vite build --mode template",
+    "build:control": "vite build --mode control",
+    "build:template:baseline": "vite build --mode baseline-template"
+  },
+  "dependencies": {
+    "shared-demo": "workspace:*"
+  },
+  "devDependencies": {
+    "@module-federation/vite": "1.23.5",
+    "vite": "8.3.4",
+    "typescript": "6.0.3"
+  }
+}
